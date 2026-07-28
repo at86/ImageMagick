@@ -7,9 +7,11 @@ download_release()
   local release=$2
   local file=$3
 
-  echo "Downloading $file from release $release of $project"
+  echo "Downloading $file from release $release of $project; win7..."
 
-  curl -sS -L "https://github.com/ImageMagick/$project/releases/download/$release/$file" -o "$file"
+  # curl -sS -L "https://github.com/ImageMagick/$project/releases/download/$release/$file" -o "$file"
+  # https://github.com/at86/Dependencies/actions/runs/29730638479/artifacts/8456519748
+  curl -sS -L "https://github.com/at86/Dependencies/releases/download/20260720/windows-x64-static-OpenMP-linked-runtime.zip" -o "$file"
 }
 
 download_dependencies()
